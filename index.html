@@ -16,7 +16,7 @@
   </head>
   <body class="bg-zinc-800">
     <main class="w-full h-screen flex items-center justify-center">
-      <div id="card" class="rounded-md h-80 bg-zinc-700">
+      <div id="card" class="rounded-md bg-zinc-700 shadow-lg">
         <header class="px-5 py-2 border-zinc-600 border-b-2">
           <div class="flex items-center space-x-3 w-full justify-between">
             <div>
@@ -33,12 +33,68 @@
             <div>
               <button class="px-3 py-2">
                 <i
-                  class="bi bi-trash3-fill text-zinc-300 transition-all hover:text-red-300"
+                  class="bi bi-trash3-fill hover:text-zinc-300 transition-all text-red-300"
                 ></i>
               </button>
             </div>
           </div>
         </header>
+        <main class="p-6">
+          <small class="text-zinc-300">Pesquisas Recentes</small>
+          <aside class="w-full grid grid-cols-1 gap-5 mt-4">
+            <div class="result flex items-center justify-between">
+              <p class="result-name font-semibold text-white">
+                Mário Lino Salembe
+              </p>
+              <a href="#">
+                <i
+                  class="fa-solid fa-circle-info text-green-500 transition-all hover:text-white"
+                ></i>
+              </a>
+            </div>
+            <div class="result flex items-center justify-between">
+              <p class="result-name font-semibold text-white">
+                Joana Camila Sousa
+              </p>
+              <a href="#">
+                <i
+                  class="fa-solid fa-circle-info text-green-500 transition-all hover:text-white"
+                ></i>
+              </a>
+            </div>
+            <div class="result flex items-center justify-between">
+              <p class="result-name font-semibold text-white">Melinda Mendes</p>
+              <a href="#">
+                <i
+                  class="fa-solid fa-circle-info text-green-500 transition-all hover:text-white"
+                ></i>
+              </a>
+            </div>
+          </aside>
+        </main>
+        <footer>
+          <div
+            class="py-4 px-3 flex space-x-2 items-center justify-center border-zinc-600 border-t-2"
+          >
+            <div>
+              <small>
+                <a
+                  href="#"
+                  class="text-zinc-300 font-semibold transition-all hover:text-green-500 hover:underline"
+                  >Mário Lino Salembe</a
+                >
+              </small>
+            </div>
+            <div>
+              <span class="text-white">|</span>
+            </div>
+            <div>
+              <small class="poppinsFont font-semibold text-green-500"
+                >CodeJourney</small
+              >
+            </div>
+          </div>
+        </footer>
       </div>
     </main>
 
