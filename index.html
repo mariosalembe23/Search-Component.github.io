@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- TAILWIND CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- LINK CUSTOMIZADO -->
+    <link rel="stylesheet" href="./public/css/custom.css" />
+    <!-- FONT AWESOME -->
+    <script
+      src="https://kit.fontawesome.com/562a5f8137.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+  </head>
+  <body class="bg-zinc-800">
+    <main class="w-full h-screen flex items-center justify-center">
+      <div id="card" class="rounded-md h-80 bg-zinc-700">
+        <header class="px-5 py-2 border-zinc-600 border-b-2">
+          <div class="flex items-center space-x-3 w-full justify-between">
+            <div>
+              <i class="fa-solid fa-magnifying-glass text-zinc-300"></i>
+            </div>
+            <div class="w-full">
+              <input
+                type="text"
+                name="pesquisar"
+                id="pesquisar"
+                class="w-full font-semibold bg-transparent px-4 py-3 rounded-md outline-none text-white"
+              />
+            </div>
+            <div>
+              <button class="px-3 py-2">
+                <i
+                  class="bi bi-trash3-fill text-zinc-300 transition-all hover:text-red-300"
+                ></i>
+              </button>
+            </div>
+          </div>
+        </header>
+      </div>
+    </main>
+
+    <script src="./public/js/main.js"></script>
+  </body>
+</html>
