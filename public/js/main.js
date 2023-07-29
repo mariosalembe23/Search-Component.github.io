@@ -3,6 +3,7 @@ window.addEventListener("load", () => {
   const inputPesquisar = document.getElementById("pesquisar");
   const limparValue = document.getElementById("apagar");
   inputPesquisar.addEventListener("input", BuscarNomes);
+  const notFound = document.getElementById("notFound");
   limparValue.addEventListener("click", () => {
     inputPesquisar.value = "";
     for (const result of results) {
@@ -13,7 +14,6 @@ window.addEventListener("load", () => {
   function BuscarNomes() {
     const resultsDinamic = document.querySelectorAll(".result-dinamic");
     const valueInput = inputPesquisar.value;
-    console.log(resultsDinamic);
     // PEGANDO AS PRIMEIRAS DUAS LETRAS INSERIDAS PELO USUÁRIO
     const valorInput = inputPesquisar.value
       .trim()
@@ -41,8 +41,10 @@ window.addEventListener("load", () => {
           );
 
           if (data.length !== 0) {
+            notFound.classList.add("hidden")
+            resultsBlock.classList.remove("none")
             data.forEach((Element) => {
-              const div = document.createElement("div");
+              let div = document.createElement("div");
               const p = document.createElement("p");
               const a = document.createElement("a");
               const i = document.createElement("i");
@@ -57,14 +59,17 @@ window.addEventListener("load", () => {
                 "class",
                 "fa-solid fa-circle-info text-green-500 transition-all hover:text-white"
               );
-
+              a.setAttribute("href", "https://github.com/mariosalembe23")
+              a.appendChild(i)  
               p.textContent = Element.name;
               div.appendChild(p);
+              div.appendChild(a)
               resultsBlock.appendChild(div);
               // console.log(p.textContent);
             });
-          }else{
-            
+          } else {
+            notFound.classList.remove("hidden");
+            resultsBlock.classList.add("none");
           }
         });
     }

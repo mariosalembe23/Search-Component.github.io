@@ -12,7 +12,7 @@
       src="https://kit.fontawesome.com/562a5f8137.js"
       crossorigin="anonymous"
     ></script>
-    <title>Buscador - CodeJourney</title>
+    <title>Buscador Dinâmico - CodeJourney</title>
   </head>
   <body class="bg-zinc-800">
     <main class="w-full h-screen flex items-center justify-center">
@@ -42,12 +42,17 @@
         </header>
         <main class="p-6">
           <small class="text-zinc-300">Pesquisas Recentes</small>
-          <aside id="results-block" class="w-full grid grid-cols-1 gap-5 mt-4">
+          <aside class="mt-4 text-center w-full p-5 hidden" id="notFound">
+            <h3 class="font-bold text-zinc-400">
+              Sem Correspondências <i class="fa-solid fa-face-sad-tear"></i>
+            </h3>
+          </aside>
+          <aside id="results-block" class="grid w-full grid-cols-1 gap-5 mt-4">
             <div class="result flex items-center justify-between">
               <p class="result-name font-semibold text-white">
                 Mário Lino Salembe
               </p>
-              <a href="#">
+              <a href="https://github.com/mariosalembe23">
                 <i
                   class="fa-solid fa-circle-info text-green-500 transition-all hover:text-white"
                 ></i>
@@ -57,7 +62,7 @@
               <p class="result-name font-semibold text-white">
                 Joana Camila Sousa
               </p>
-              <a href="#">
+              <a href="https://github.com/mariosalembe23">
                 <i
                   class="fa-solid fa-circle-info text-green-500 transition-all hover:text-white"
                 ></i>
@@ -65,7 +70,7 @@
             </div>
             <div class="result flex items-center justify-between">
               <p class="result-name font-semibold text-white">Melinda Mendes</p>
-              <a href="#">
+              <a href="https://github.com/mariosalembe23">
                 <i
                   class="fa-solid fa-circle-info text-green-500 transition-all hover:text-white"
                 ></i>
@@ -80,7 +85,7 @@
             <div>
               <small>
                 <a
-                  href="#"
+                  href="https://github.com/mariosalembe23"
                   class="text-zinc-300 font-semibold transition-all hover:text-slate-400 hover:underline"
                   >Mário Lino Salembe</a
                 >
