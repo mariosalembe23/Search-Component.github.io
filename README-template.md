@@ -7,7 +7,7 @@ Neste Componente de Pesquisa Utilizei alguns Recursos populares como:
 
 # LINKS
 Github: https://github.com/mariosalembe23
-Repositório: 
+Repositório: https://github.com/mariosalembe23/Search-Component.github.io
 Live URL:
 
 # Imagens
