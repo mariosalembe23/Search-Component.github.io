@@ -21,3 +21,9 @@ svg{
 i{
     font-size: 1.4rem;
 }
+#pesquisar::placeholder{
+  color: rgb(212 212 216 / 1);
+}
+.none{
+  display: none !important;
+}

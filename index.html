@@ -3,16 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- TAILWIND CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
     <!-- LINK CUSTOMIZADO -->
     <link rel="stylesheet" href="./public/css/custom.css" />
+    <!-- TAILWIND CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <!-- FONT AWESOME -->
     <script
       src="https://kit.fontawesome.com/562a5f8137.js"
       crossorigin="anonymous"
     ></script>
-    <title>Document</title>
+    <title>Buscador - CodeJourney</title>
   </head>
   <body class="bg-zinc-800">
     <main class="w-full h-screen flex items-center justify-center">
@@ -27,11 +27,12 @@
                 type="text"
                 name="pesquisar"
                 id="pesquisar"
-                class="w-full font-semibold bg-transparent px-4 py-3 rounded-md outline-none text-white"
+                placeholder="Clique aqui para Pesquisar"
+                class="w-full bg-transparent px-4 py-3 rounded-md outline-none text-white"
               />
             </div>
             <div>
-              <button class="px-3 py-2">
+              <button class="px-3 py-2" id="apagar">
                 <i
                   class="bi bi-trash3-fill hover:text-zinc-300 transition-all text-red-300"
                 ></i>
@@ -41,7 +42,7 @@
         </header>
         <main class="p-6">
           <small class="text-zinc-300">Pesquisas Recentes</small>
-          <aside class="w-full grid grid-cols-1 gap-5 mt-4">
+          <aside id="results-block" class="w-full grid grid-cols-1 gap-5 mt-4">
             <div class="result flex items-center justify-between">
               <p class="result-name font-semibold text-white">
                 Mário Lino Salembe
@@ -80,7 +81,7 @@
               <small>
                 <a
                   href="#"
-                  class="text-zinc-300 font-semibold transition-all hover:text-green-500 hover:underline"
+                  class="text-zinc-300 font-semibold transition-all hover:text-slate-400 hover:underline"
                   >Mário Lino Salembe</a
                 >
               </small>
@@ -98,6 +99,6 @@
       </div>
     </main>
 
-    <script src="./public/js/main.js"></script>
+    <script src="./public/js/main.js" defer></script>
   </body>
 </html>
