@@ -21,7 +21,7 @@ window.addEventListener("load", () => {
         result.classList.add("hidden");
       }
       const resultsBlock = document.getElementById("results-block");
-      fetch("/data.json")
+      fetch("https://github.com/mariosalembe23/Search-Component.github.io/blob/main/data.json")
         .then((response) => response.json())
         .then((json) => {
           const data = json.filter((nome) => {
