@@ -32,50 +32,23 @@
               />
             </div>
             <div>
-              <button class="px-3 py-2" id="apagar">
+              <button class="px-3 py-2" id="buscar">
                 <i
-                  class="bi bi-trash3-fill hover:text-zinc-300 transition-all text-red-300"
+                  class="bi bi-send-fill text-2xl hover:text-zinc-300 transition-all text-green-500"
                 ></i>
               </button>
             </div>
           </div>
         </header>
-        <main class="p-6">
-          <small class="text-zinc-300">Pesquisas Recentes</small>
-          <aside class="mt-4 text-center w-full p-5 hidden" id="notFound">
+        <main class="mt-2">
+          
+          <aside class=" text-center w-full p-8 hidden" id="notFound">
             <h3 class="font-bold text-zinc-400">
               Sem Correspondências <i class="fa-solid fa-face-sad-tear"></i>
             </h3>
           </aside>
-          <aside id="results-block" class="grid w-full grid-cols-1 gap-5 mt-4">
-            <div class="result flex items-center justify-between">
-              <p class="result-name font-semibold text-white">
-                Mário Lino Salembe
-              </p>
-              <a href="https://github.com/mariosalembe23">
-                <i
-                  class="fa-solid fa-circle-info text-green-500 transition-all hover:text-white"
-                ></i>
-              </a>
-            </div>
-            <div class="result flex items-center justify-between">
-              <p class="result-name font-semibold text-white">
-                Joana Camila Sousa
-              </p>
-              <a href="https://github.com/mariosalembe23">
-                <i
-                  class="fa-solid fa-circle-info text-green-500 transition-all hover:text-white"
-                ></i>
-              </a>
-            </div>
-            <div class="result flex items-center justify-between">
-              <p class="result-name font-semibold text-white">Melinda Mendes</p>
-              <a href="https://github.com/mariosalembe23">
-                <i
-                  class="fa-solid fa-circle-info text-green-500 transition-all hover:text-white"
-                ></i>
-              </a>
-            </div>
+          <aside id="results-block" class="gap-6  relative overflow-auto h-52 py-2 px-10 w-full flex flex-col mt-4">
+              <h4 class="text-center text-zinc-300 font-semibold text-xl" id="text-recent">Sem Pesquisas Recentes</h4>
           </aside>
         </main>
         <footer>

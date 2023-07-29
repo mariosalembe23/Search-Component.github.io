@@ -12,7 +12,7 @@ body{
   font-family: var(--fontPoppins);
 }
 #card {
-  max-width: 40rem;
+  max-width: 50rem;
   width: 90%;
 }
 svg{
@@ -26,4 +26,11 @@ i{
 }
 .none{
   display: none !important;
+}
+#text-recent{
+  position: absolute;
+  transform: translate(-50%);
+  top: 35%;
+  left: 50%;
+  width: 100%;
 }

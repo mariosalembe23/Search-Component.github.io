@@ -1,27 +1,15 @@
 window.addEventListener("load", () => {
   const results = document.querySelectorAll(".result");
   const inputPesquisar = document.getElementById("pesquisar");
-  const limparValue = document.getElementById("apagar");
-  inputPesquisar.addEventListener("input", BuscarNomes);
+  const buscar = document.getElementById("buscar");
   const notFound = document.getElementById("notFound");
-  limparValue.addEventListener("click", () => {
-    inputPesquisar.value = "";
-    for (const result of results) {
-      result.classList.add("hidden");
-    }
-  });
 
   function BuscarNomes() {
     const resultsDinamic = document.querySelectorAll(".result-dinamic");
     const valueInput = inputPesquisar.value;
-    // PEGANDO AS PRIMEIRAS DUAS LETRAS INSERIDAS PELO USUÁRIO
-    const valorInput = inputPesquisar.value
-      .trim()
-      .substring(0, 1)
-      .toLowerCase();
 
-    // console.log(valorInput);
     if (valueInput.trim() === "") {
+      document.getElementById("text-recent").classList.remove("hidden");
       for (const result of results) {
         result.classList.remove("hidden");
       }
@@ -36,13 +24,17 @@ window.addEventListener("load", () => {
       fetch("/data.json")
         .then((response) => response.json())
         .then((json) => {
-          const data = json.filter((nome) =>
-            nome.name.toLowerCase().startsWith(valorInput)
-          );
-
+          const data = json.filter((nome) => {
+            return (
+              nome.name.toLowerCase().includes(valueInput.toLowerCase()) ||
+              nome.name.toLowerCase() === valueInput.toLowerCase()
+            );
+          });
           if (data.length !== 0) {
-            notFound.classList.add("hidden")
-            resultsBlock.classList.remove("none")
+            document.getElementById("text-recent").classList.add("hidden");
+            notFound.classList.add("hidden");
+            resultsBlock.classList.remove("none");
+
             data.forEach((Element) => {
               let div = document.createElement("div");
               const p = document.createElement("p");
@@ -59,13 +51,12 @@ window.addEventListener("load", () => {
                 "class",
                 "fa-solid fa-circle-info text-green-500 transition-all hover:text-white"
               );
-              a.setAttribute("href", "https://github.com/mariosalembe23")
-              a.appendChild(i)  
+              a.setAttribute("href", "https://github.com/mariosalembe23");
+              a.appendChild(i);
               p.textContent = Element.name;
               div.appendChild(p);
-              div.appendChild(a)
+              div.appendChild(a);
               resultsBlock.appendChild(div);
-              // console.log(p.textContent);
             });
           } else {
             notFound.classList.remove("hidden");
@@ -74,6 +65,12 @@ window.addEventListener("load", () => {
         });
     }
   }
-
-  BuscarNomes();
+  buscar.addEventListener("click", () => {
+    BuscarNomes();
+    const resultsDinamic = document.querySelectorAll(".result-dinamic");
+    for (const resultDinamic of resultsDinamic) {
+      resultDinamic.classList.add("none");
+    }
+    document.getElementById("text-recent").classList.remove("hidden");
+  });
 });
